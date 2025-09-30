@@ -1,0 +1,7 @@
+Auxiliary files = decomp;
+
+File GTAPSETS = ./EUDR18AEZ/sets.har; !  file with set specification
+File GTAPSOL = ./EUDR18AEZ/numeraire.sol; 
+File GTAPBASE = ./EUDR18AEZ/basedata.har; !  file containing all base data
+File GTAPUPDATE = ./EUDR18AEZ/numeraire.upd; ! see GTAPSOL
+File WELVIEW = ./EUDR18AEZ/numeraire_wel.upd ; !  file containing behavioral parameters

@@ -1,0 +1,72 @@
+iz1 = yes ;
+! KZ2 = yes;
+! NDS = yes; ! no displays
+! Extrapolation accuracy file = YES ;
+! CPU = yes;
+! servants=2;
+start with MMNZ = 1600000 ;
+
+! Auxiliary files (i.e., which model)
+! ---------------
+!
+Auxiliary files = 
+   gtapaez3 ;
+!
+! Original Data files
+! -------------------
+!
+File GTAPSETS = ./EUDR18AEZ/sets.har ; !  file with set specification
+File GTAPDATA = ./EUDR18AEZ/basedata.har ; !  file containing all base data
+File GTAPPARM = ./EUDR18AEZ/default.prm ; !  file containing behavioral parameters
+!
+! Output files
+! ------------
+!
+Solution file = ./EUDR18AEZ/numeraire;
+Updated file GTAPDATA = ./EUDR18AEZ/numeraire.upd ;
+Extrapolation Accuracy File = yes ;
+dpn = yes ;
+!
+! Closure
+! -------
+!
+!
+! Closure
+! -------
+!
+exogenous
+pop
+psaveslack pfactwld
+profitslack incomeslack endwslack
+cgdslack tradslack
+ams atm atf ats atd
+aosec aoreg avasec avareg
+afcom afsec afreg afecom afesec afereg
+aoall afall afeall
+au dppriv dpgov dpsave
+to tpd tp tm tms tx txs tpm tf tfd
+qo(ENDW_COMM,REG) ;
+Rest Endogenous ;
+!
+! Verbal description
+! ------------------
+!
+Verbal Description = 
+    "Numeraire shock (18 AEZs 2017 , Bases on GTAP Center Release v11c";
+!
+! Solution method
+! ---------------
+!
+Method = Gragg;
+Steps = 2 4 6;
+subintervals = 1;
+!
+! Miscellaneous info
+! ------------------
+!
+automatic accuracy = no;
+!
+! Shocks
+! ------
+!
+ Shock pfactwld = 1;

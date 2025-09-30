@@ -1,0 +1,17 @@
+!
+! Closure
+! -------
+!
+exogenous
+pop
+psaveslack pfactwld
+profitslack incomeslack endwslack
+cgdslack tradslack
+ams atm atf ats atd
+aosec aoreg avasec avareg
+afcom afsec afreg afecom afesec afereg
+aoall afall afeall
+au dppriv dpgov dpsave
+to tpd tp tm tms tx txs tpm tf tfd
+qo(ENDW_COMM,REG) ;
+Rest Endogenous ;
