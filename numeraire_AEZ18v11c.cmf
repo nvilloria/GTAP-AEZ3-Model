@@ -1,0 +1,72 @@
+iz1 = yes ;
+! KZ2 = yes;
+! NDS = yes; ! no displays
+! Extrapolation accuracy file = YES ;
+! CPU = yes;
+! servants=2;
+start with MMNZ = 1600000 ;
+
+! Auxiliary files (i.e., which model)
+! ---------------
+!
+Auxiliary files = 
+   gtapaez3 ;
+!
+! Original Data files
+! -------------------
+!
+File GTAPSETS = ./AEZ18v11c/sets.har ; !  file with set specification
+File GTAPDATA = ./AEZ18v11c/basedata.har ; !  file containing all base data
+File GTAPPARM = ./AEZ18v11c/default.prm ; !  file containing behavioral parameters
+!
+! Output files
+! ------------
+!
+Solution file = ./AEZ18v11c/numeraire;
+Updated file GTAPDATA = ./AEZ18v11c/numeraire.upd ;
+Extrapolation Accuracy File = yes ;
+dpn = yes ;
+!
+! Closure
+! -------
+!
+!
+! Closure
+! -------
+!
+exogenous
+pop
+psaveslack pfactwld
+profitslack incomeslack endwslack
+cgdslack tradslack
+ams atm atf ats atd
+aosec aoreg avasec avareg
+afcom afsec afreg afecom afesec afereg
+aoall afall afeall
+au dppriv dpgov dpsave
+to tpd tp tm tms tx txs tpm tf tfd
+qo(ENDW_COMM,REG) ;
+Rest Endogenous ;
+!
+! Verbal description
+! ------------------
+!
+Verbal Description = 
+    "Numeraire shock (14 Biomes 2017 , Based on GTAP Center Release v11c";
+!
+! Solution method
+! ---------------
+!
+Method = Gragg;
+Steps = 2 4 6;
+subintervals = 1;
+!
+! Miscellaneous info
+! ------------------
+!
+automatic accuracy = no;
+!
+! Shocks
+! ------
+!
+ Shock pfactwld = 1;

@@ -6,3 +6,6 @@
 *.upd
 *.log
 *.fig
+*.exe
+*.axs
+*.axt
